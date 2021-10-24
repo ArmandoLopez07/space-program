@@ -2,3 +2,172 @@
   margin: 0;
   padding: 0;
 }
+/*Imports de libreias*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+/*Inician estilos generales de pagina*/
+body{
+  
+  position: relative;
+  background-image: url('../assets/home/background-home-desktop.jpg');
+  background-color: rgb(13, 0, 26);
+  height: 100vh;
+  
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 130px;
+  color: white;
+}
+h4{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 2px;
+}
+/*home main container style*/
+.home-container{
+  width: 100%;
+  height: 100%;
+ display: grid;
+ grid-template-areas:'header header'
+                     'texte explore' ;
+ grid-template-rows: 100px 1fr ;
+ grid-template-columns: 1fr 1fr;
+
+ background-size:cover;
+ background-repeat: no-repeat;
+
+}
+/* header styles*/
+.header{
+  grid-area: header;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  justify-self: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.linea{
+  width: 30%;
+  border-width: 0 0 3px 0;
+  border-color: rgb(80, 80, 80);
+  position: absolute;
+  left: 13%;
+  z-index: 1;
+}
+.menu{
+  height: 100%;
+  width: 60%;
+  background-color: rgba(20,20,20, 0.2);
+  backdrop-filter: blur(5px);
+}
+.menu-list{
+  list-style: none;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: stretch;
+  justify-content: center;
+}
+.list-one{
+  padding-top: auto;
+  padding-bottom: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-one:hover{
+  border-bottom:solid 2px rgb(124, 124, 124);
+  
+}
+.list-one a{
+  text-decoration: none;
+  color: rgb(201, 200, 230);
+  font-family: 'Barlow Condensed',sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+.menu-image{
+  position: relative;
+  left: 5%;
+}
+/*Lefttext styles*/
+.home-text{
+  grid-area: texte;
+  margin: 13%;
+}
+
+#travel{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(208,214,249);
+  font-size: 22px;
+  padding-bottom: 50px;
+  letter-spacing: 4.75px;
+}
+/*right home circle text*/
+.home-explore{
+  grid-area: explore;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20%;
+}
+.circle{
+  width: 35vh;
+  height: 35vh;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline-width: 0;
+  outline-style: solid;
+  outline-color: gray;
+  transition: outline 1s ease-in-out;
+}
+.circle p{
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(1, 2, 10);
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.circle:hover{
+  outline-style: solid;
+  outline-color: rgba(95, 95, 95, 0.582);
+  outline-width: 50px;
+}
+/*Responsive tablet design*/
+@media only screen and  (max-width:1050px){
+  body{
+    background-image: url('../assets/home/background-home-tablet.jpg');
+  }
+  .linea{
+    display: none;
+  }
+  .numeros{display: none;}
+  .home-container{
+    grid-template-areas: 'header'
+                          'texte'
+                         'explore';
+    grid-template-columns: 1fr; 
+    grid-template-rows:100px 1fr 1fr; 
+  }
+  .home-text{
+    margin: 80px;
+  }
+  .home-explore{
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle{
+    width: 35vw;
+    height: 35vw;
+  }
+}
+
