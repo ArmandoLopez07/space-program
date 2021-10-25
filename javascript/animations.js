@@ -1,4 +1,5 @@
 "use strict";
+// animaciones para disenio de menu responsive
 $(document).ready(function () {
   var burguer = $(".icon-menu1");
   var tache = $(".icon-menu2");
