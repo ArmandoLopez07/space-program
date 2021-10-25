@@ -1,14 +1,23 @@
 "use strict";
 // animaciones para disenio de menu responsive
 $(document).ready(function () {
-  var burguer = $(".icon-menu1");
-  var tache = $(".icon-menu2");
+  var activa = $(".menu-btn");
   var menu = $(".menu");
+  var flag = false;
 
-  burguer.click(function () {
-    menu.css("right", "0");
-  });
-  tache.click(function () {
-    menu.css("right", "-100%");
+  $(activa).click(function () {
+    if (flag == false) {
+      menu.css("width", "80%");
+
+      activa.css("background-image", "url('./assets/shared/icon-close.svg')");
+      flag = true;
+    } else {
+      menu.css("width", "0");
+      activa.css(
+        "background-image",
+        "url('./assets/shared/icon-hamburger.svg')"
+      );
+      flag = false;
+    }
   });
 });

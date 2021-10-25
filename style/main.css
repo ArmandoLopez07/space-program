@@ -19,6 +19,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+.menu-btn {
+  display: none;
+  width: 10vw;
+  height: 10vw;
+  background-repeat: no-repeat;
+}
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 130px;
@@ -81,6 +87,7 @@ h4 {
   align-items: stretch;
   justify-content: center;
 }
+
 .list-one {
   padding-top: auto;
   padding-bottom: auto;
@@ -92,8 +99,12 @@ h4 {
   justify-content: center;
   align-items: center;
 }
+
 .list-one:hover {
   border-bottom: solid 2px rgb(124, 124, 124);
+}
+.home {
+  border-bottom: solid 2px rgb(255, 255, 255);
 }
 .list-one a {
   text-decoration: none;
@@ -116,7 +127,7 @@ h4 {
 .home-text {
   /*---- uso de grid ---- */
   grid-area: texte;
-  margin: 13%;
+  margin: 35% 15% 5% 15%;
 }
 
 #travel {
@@ -173,6 +184,9 @@ h4 {
   .numeros {
     display: none;
   }
+  .home-text {
+    margin: 15% 12% 0 15%;
+  }
   .home-container {
     grid-template-areas:
       "header"
@@ -181,12 +195,23 @@ h4 {
     grid-template-columns: 1fr;
     grid-template-rows: 100px 1fr 1fr;
   }
+  .home-explore {
+    justify-content: center;
+    align-items: center;
+  }
+  .circle {
+    width: 35vw;
+    height: 35vw;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media only screen and (max-width: 450px) {
   body {
     background-image: url("../assets/home/background-home-mobile.jpg");
     background-attachment: fixed;
   }
+
   h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 80px;
@@ -205,6 +230,9 @@ h4 {
     padding-bottom: 20px;
     letter-spacing: 4.75px;
   }
+  .home {
+    border-bottom: none;
+  }
   .linea {
     display: none;
   }
@@ -215,18 +243,26 @@ h4 {
     left: -20%;
   }
   .icon-menu2 {
-    display: block;
+    display: none;
     position: relative;
     left: 10%;
     top: 10%;
   }
+  .menu-btn {
+    display: block !important;
+    background-image: url("../assets/shared/icon-hamburger.svg");
+    position: absolute;
+    right: 15vw;
+    top: 15vw;
+    z-index: 1;
+  }
 
   .menu {
     position: absolute;
-    right: -100%;
+    right: 0;
     top: 0;
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 0%;
+    height: 100%;
     transition: 1s;
   }
   .menu-list {
@@ -260,7 +296,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20%;
+    padding: 0;
   }
   .circle {
     width: 35vw;
