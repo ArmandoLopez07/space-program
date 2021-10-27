@@ -96,8 +96,7 @@ h4 {
 .list-one {
   padding-top: auto;
   padding-bottom: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+
   text-align: center;
   /*--------- uso de flex--------- */
   display: flex;
@@ -120,6 +119,7 @@ h4 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   letter-spacing: 2.7px;
+  padding: 20px 40px 20px 40px;
 }
 .menu-image {
   position: relative;
@@ -181,11 +181,146 @@ h4 {
   outline-color: rgba(95, 95, 95, 0.582);
   outline-width: 50px;
 }
+/* -----------------Destination page--------------------------------- */
+.destination-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "planet texte";
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.anim {
+  animation: fade 2s;
+  /*---- uso de grid ---- */
+}
+.destiny-planet {
+  grid-area: planet;
+  display: flex;
+  flex-direction: column;
+  padding: 15% 10% 15% 20%;
+}
+.destiny-planet h4 {
+  padding: 5% 0 15% 0%;
+}
+.destiny-text {
+  grid-area: texte;
+  display: flex;
+  flex-direction: column;
+
+  padding: 15%;
+}
+.planet-menu {
+  padding-bottom: 15%;
+  padding-top: 20%;
+}
+.planet-list {
+  list-style: none;
+  /*--------- uso de flex--------- */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.plan-img {
+  align-self: center;
+  padding-top: 5%;
+  animation: fade 1s;
+}
+.planet-desc {
+  color: rgb(208, 214, 249);
+}
+.marte {
+  display: none;
+}
+.europa {
+  display: none;
+}
+.titan {
+  display: none;
+}
+.data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.planet-divi {
+  margin: 10% 0 5% 0;
+  border-color: rgb(119, 119, 119);
+}
+
+.list-one p {
+  text-decoration: none;
+  color: rgb(201, 200, 230);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  padding: 20px 40px 20px 40px;
+}
+.data-p {
+  color: rgb(201, 200, 230);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
 /*Responsive tablet design*/
 @media only screen and (max-width: 1050px) {
   body {
     background-image: url("../assets/home/background-home-tablet.jpg");
+    background-attachment: fixed;
   }
+  /* ------responsive tablet destination--------- */
+  .destination-container {
+    grid-template-areas:
+      "header "
+      "planet "
+      "texte";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+  .destiny-planet {
+    padding: 3% 3% 0% 3%;
+  }
+  .destiny-planet h4 {
+    padding: 3% 3% 3% 3%;
+  }
+  .destiny-text {
+    grid-area: texte;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 10% 0% 10%;
+  }
+  .planet-menu {
+    padding-bottom: 3%;
+    padding-top: 0%;
+  }
+  .planet-divi {
+    margin: 5% 0 5% 0;
+    border-color: rgb(119, 119, 119);
+  }
+  .planet-list {
+    list-style: none;
+    /*--------- uso de flex--------- */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .plan-img {
+    align-self: center;
+    padding-top: 0%;
+    animation: fade 1s;
+  }
+  .planet-desc {
+    color: rgb(208, 214, 249);
+  }
+  /* --------------------------------------- */
   .linea {
     display: none;
   }
@@ -310,91 +445,6 @@ h4 {
     width: 35vw;
     height: 35vw;
   }
-}
-/* -----------------Destination page--------------------------------- */
-.destination-container {
-  width: 100%;
-  height: 100%;
-  background-image: url("../assets/destination/background-destination-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.anim {
-  animation: fade 2s;
-  display: grid;
-  /*---- uso de grid ---- */
-  grid-template-areas:
-    "header header"
-    "planet texte";
-  grid-template-rows: 100px 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-.destiny-planet {
-  grid-area: planet;
-  display: flex;
-  flex-direction: column;
-  padding: 15% 10% 15% 20%;
-}
-.destiny-planet h4 {
-  padding: 5% 0 15% 0%;
-}
-.destiny-text {
-  grid-area: texte;
-  display: flex;
-  flex-direction: column;
-
-  padding: 15%;
-}
-.planet-menu {
-  padding-bottom: 15%;
-  padding-top: 20%;
-}
-.planet-list {
-  list-style: none;
-  /*--------- uso de flex--------- */
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.planet-img {
-  align-self: center;
-}
-.planet-desc {
-  color: rgb(208, 214, 249);
-}
-.marte {
-  display: none;
-}
-.europa {
-  display: none;
-}
-.titan {
-  display: none;
-}
-.data {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.planet-divi {
-  margin: 10% 0 5% 0;
-  border-color: rgb(119, 119, 119);
-}
-.data-mars {
-  display: none;
-}
-.data-europa {
-  display: none;
-}
-.data-titan {
-  display: none;
-}
-.data-p {
-  color: rgb(201, 200, 230);
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
 }
 /* -----Animaciones--------- */
 @keyframes fade {
