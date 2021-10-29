@@ -7,16 +7,17 @@ $(document).ready(function () {
 
   $(activa).click(function () {
     if (flag == false) {
-      menu.css("width", "80%");
-
-      activa.css("background-image", "url('./assets/shared/icon-close.svg')");
+      menu.css("width", "100%");
+      $(".menu-list").css("display", "flex");
+      activa.css("background-image", "url('../assets/shared/icon-close.svg')");
       flag = true;
     } else {
       menu.css("width", "0");
       activa.css(
         "background-image",
-        "url('./assets/shared/icon-hamburger.svg')"
+        "url('../assets/shared/icon-hamburger.svg')"
       );
+      $(".menu-list").css("display", "none");
       flag = false;
     }
   });

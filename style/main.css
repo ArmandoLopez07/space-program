@@ -25,12 +25,13 @@ body {
   background-repeat: no-repeat;
 }
 h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 130px;
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 150px;
   color: white;
 }
 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bellefair", serif;
   font-size: 90px;
   color: white;
 }
@@ -94,9 +95,6 @@ h4 {
 }
 
 .list-one {
-  padding-top: auto;
-  padding-bottom: auto;
-
   text-align: center;
   /*--------- uso de flex--------- */
   display: flex;
@@ -119,7 +117,7 @@ h4 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
   letter-spacing: 2.7px;
-  padding: 20px 40px 20px 40px;
+  padding: 20px 30px 20px 30px;
 }
 .menu-image {
   position: relative;
@@ -154,6 +152,9 @@ h4 {
   justify-content: flex-end;
   align-items: flex-end;
   padding: 20%;
+}
+.lin {
+  text-decoration: none;
 }
 .circle {
   width: 35vh;
@@ -282,8 +283,6 @@ h4 {
       "texte";
     grid-template-columns: 1fr;
     grid-template-rows: 100px 1fr 1fr;
-
-    background-image: url("../assets/destination/background-destination-tablet.jpg");
   }
   .destiny-planet {
     padding: 3% 3% 0% 3%;
@@ -328,7 +327,7 @@ h4 {
     display: none;
   }
   .home-text {
-    margin: 15% 12% 0 15%;
+    margin: 10% 12% 0 15%;
   }
   .home-container {
     grid-template-areas:
@@ -341,6 +340,7 @@ h4 {
   .home-explore {
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
   .circle {
     width: 35vw;
@@ -353,15 +353,23 @@ h4 {
   body {
     background-image: url("../assets/home/background-home-mobile.jpg");
     background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    background-size: fill;
   }
-
+  .destino {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
   h1 {
-    font-family: "Montserrat", sans-serif;
     font-size: 80px;
     color: white;
   }
+  h2 {
+    font-size: 75px;
+
+    color: white;
+  }
   h4 {
-    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     color: white;
     letter-spacing: 2px;
@@ -373,9 +381,7 @@ h4 {
     padding-bottom: 20px;
     letter-spacing: 4.75px;
   }
-  .home {
-    border-bottom: none;
-  }
+
   .linea {
     display: none;
   }
@@ -405,11 +411,12 @@ h4 {
     right: 0;
     top: 0;
     width: 0%;
-    height: 100%;
+    height: 100vh;
     transition: 1s;
   }
   .menu-list {
     flex-direction: column;
+    display: none;
   }
   .numeros {
     display: none;
@@ -441,9 +448,33 @@ h4 {
     align-items: center;
     padding: 0;
   }
+  .lin {
+    text-decoration: none;
+  }
+
   .circle {
     width: 35vw;
     height: 35vw;
+  }
+  .destination-container {
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+      "header "
+      "planet "
+      "texte";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 2fr;
+  }
+  .list-one p {
+    padding: 20px 20px 20px 20px;
+  }
+  .plan-img {
+    width: 50vw;
+    padding: 5%;
+  }
+  .data {
+    padding-bottom: 30px;
   }
 }
 /* -----Animaciones--------- */
