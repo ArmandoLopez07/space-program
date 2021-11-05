@@ -168,7 +168,7 @@ h4 {
   outline-width: 0;
   outline-style: solid;
   outline-color: gray;
-  transition: outline 1s ease-in-out;
+  transition: outline 1s ease-in-out; /*transicion aplicada*/
 }
 .circle p {
   margin: auto;
@@ -198,8 +198,7 @@ h4 {
   grid-template-columns: 1fr 1fr;
 }
 .anim {
-  animation: fade 2s;
-  /*---- uso de grid ---- */
+  animation: fade 2s; /*Animacion para carga de planetas*/
 }
 .destiny-planet {
   grid-area: planet;
